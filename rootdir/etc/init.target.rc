@@ -190,6 +190,10 @@ on post-fs-data
     mkdir /data/vendor/thermal 0771 root system
     mkdir /data/vendor/thermal/config 0771 root system
 
+on boot
+    # Load QCACLD WLAN driver
+    insmod /vendor/lib/modules/wlan.ko
+
 on property:sys.boot_completed=1
     # Enable UFS powersaving
     write /sys/devices/soc/1da4000.ufshc/clkscale_enable 1
