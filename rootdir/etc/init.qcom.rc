@@ -41,6 +41,10 @@ on post-fs
     chmod 0755 /sys/kernel/debug/tracing
     chown system system /sys/class/timed_output/vibrator/vtg_level
 
+    chmod 0664 /sys/devices/virtual/graphics/fb0/idle_time
+    chown system graphics /sys/devices/virtual/graphics/fb0/idle_time
+    write /sys/devices/virtual/graphics/fb0/idle_time 100
+
 on post-fs-data
     mkdir /data/vendor/misc 01771 system system
 
