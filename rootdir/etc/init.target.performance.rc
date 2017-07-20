@@ -1,5 +1,5 @@
 on init
-    # Disable UFS clk scaling
+    # Disable UFS powersaving
     write /sys/devices/soc/1da4000.ufshc/clkscale_enable 0
     write /sys/devices/soc/1da4000.ufshc/clkgate_enable 0
     write /sys/devices/soc/1da4000.ufshc/hibern8_on_idle_enable 0
@@ -54,6 +54,11 @@ on charger
     wait /dev/block/bootdevice/by-name/persist
     mount ext4 /dev/block/bootdevice/by-name/persist /persist nosuid nodev barrier=1
 
+    # Enable UFS powersaving
+    write /sys/devices/soc/1da4000.ufshc/clkscale_enable 1
+    write /sys/devices/soc/1da4000.ufshc/clkgate_enable 1
+    write /sys/devices/soc/1da4000.ufshc/hibern8_on_idle_enable 1
+
     start vendor.hvdcp_opti
     start vendor.thermal-engine
     start vendor.qcom-post-boot
@@ -85,7 +90,7 @@ on post-fs
     setrlimit 8 67108864 67108864
 
 on property:sys.boot_completed=1
-    # Enable UFS clk scaling
+    # Enable UFS powersaving
     write /sys/devices/soc/1da4000.ufshc/clkscale_enable 1
     write /sys/devices/soc/1da4000.ufshc/clkgate_enable 1
     write /sys/devices/soc/1da4000.ufshc/hibern8_on_idle_enable 1
