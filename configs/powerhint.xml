@@ -44,4 +44,10 @@
         <Resource opcode="0x4180C000" value="0x0"/>       <!-- CPUBW disable hysteresis -->
         <Resource opcode="0x40400000" value="0x1"/>       <!-- POWER_COLLAPSE -->
     </Hint>
+    <Hint type="0x0E0A"> <!--AUDIO STREAMING-->
+        <Resource opcode="0x40400000" value="0x1"/>       <!-- POWER_COLLAPSE -->
+    </Hint>
+    <Hint type="0x0F0A"> <!--AUDIO_LOW_LATENCY-->
+        <Resource opcode="0x40400000" value="0x1"/>       <!-- POWER_COLLAPSE -->
+    </Hint>
 </Powerhint>

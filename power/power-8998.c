@@ -180,18 +180,18 @@ static int process_vr_mode_hint(void *data)
     return HINT_HANDLED;
 }
 
-static int process_boost(int boost_handle, int duration)
+static int process_boost(int hint_id, int boost_handle, int duration)
 {
     int *resource_values;
     int resources;
 
-    resource_values = getPowerhint(BOOST_HINT_ID, &resources);
+    resource_values = getPowerhint(hint_id, &resources);
 
     if (resource_values != NULL) {
         boost_handle = interaction_with_handle(
             boost_handle, duration, resources, resource_values);
         if (!CHECK_HANDLE(boost_handle)) {
-            ALOGE("Failed interaction_with_handle for boost_handle");
+            ALOGE("Failed interaction_with_handle for hint_id %d", hint_id);
         }
     }
 
@@ -216,6 +216,41 @@ static int process_video_encode_hint(void *data)
     return HINT_NONE;
 }
 
+int process_audio_streaming_hint(int32_t duration)
+{
+    static int audio_streaming_handle = -1;
+
+    if (duration > 0) {
+        // set max duration 2s for starting audio
+        audio_streaming_handle = process_boost(AUDIO_STREAMING_HINT_ID, audio_streaming_handle, 2000);
+        ALOGD("AUDIO STREAMING ON");
+        return HINT_HANDLED;
+    } else if (duration == 0) {
+        release_request(audio_streaming_handle);
+        ALOGD("AUDIO STREAMING OFF");
+        return HINT_HANDLED;
+    } else {
+        ALOGE("AUDIO STREAMING INVALID DATA: %d", duration);
+    }
+    return HINT_NONE;
+}
+
+int process_audio_low_latency_hint(int32_t data)
+{
+    static int audio_low_latency_handle = -1;
+
+    if (data) {
+        // Hint until canceled
+        audio_low_latency_handle = process_boost(AUDIO_LOW_LATENCY_HINT_ID, audio_low_latency_handle, 0);
+        ALOGD("AUDIO LOW LATENCY ON");
+    } else {
+        release_request(audio_low_latency_handle);
+        ALOGD("AUDIO LOW LATENCY OFF");
+        return HINT_HANDLED;
+    }
+    return HINT_HANDLED;
+}
+
 static int process_activity_launch_hint(void *data)
 {
     // boost will timeout in 5s
@@ -230,7 +265,7 @@ static int process_activity_launch_hint(void *data)
     // restart the launch hint if the framework has not yet released
     // this shouldn't happen, but we've seen bugs where it could
     if (data) {
-        launch_handle = process_boost(launch_handle, duration);
+        launch_handle = process_boost(BOOST_HINT_ID, launch_handle, duration);
         if (launch_handle > 0) {
             launch_mode = 1;
             ALOGD("Activity launch hint handled");

@@ -21,8 +21,8 @@ LOCAL_PROPRIETARY_MODULE := true
 LOCAL_MODULE_OWNER := qcom
 LOCAL_MODULE_TAGS := optional
 
-LOCAL_MODULE := android.hardware.power@1.1-service.xiaomi_msm8998
-LOCAL_INIT_RC := android.hardware.power@1.1-service.xiaomi_msm8998.rc
+LOCAL_MODULE := android.hardware.power@1.2-service.xiaomi_msm8998
+LOCAL_INIT_RC := android.hardware.power@1.2-service.xiaomi_msm8998.rc
 LOCAL_SRC_FILES := service.cpp \
     Power.cpp \
     InteractionHandler.cpp \
@@ -54,6 +54,6 @@ LOCAL_SHARED_LIBRARIES := \
     libhidltransport \
     libhardware \
     libutils \
-    android.hardware.power@1.1 \
+    android.hardware.power@1.2 \
 
 include $(BUILD_EXECUTABLE)

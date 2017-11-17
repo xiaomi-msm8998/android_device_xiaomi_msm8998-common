@@ -39,6 +39,9 @@
 #define INTERACTION_HINT_ID             (0x1A00)
 #define BOOST_HINT_ID                   (0x1B00)
 
+#define AUDIO_STREAMING_HINT_ID         (0x0E0A)
+#define AUDIO_LOW_LATENCY_HINT_ID       (0x0F0A)
+
 struct hint_data {
     unsigned long hint_id; /* This is our key. */
     unsigned long perflock_handle;
