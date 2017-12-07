@@ -200,13 +200,7 @@ static int process_boost(int boost_handle, int duration)
 
 static int process_video_encode_hint(void *data)
 {
-    static int boost_handle = -1;
-
     if (data) {
-        // TODO: remove the launch boost based on camera launch time
-        int duration = 2000; // boosts 2s for starting encoding
-        boost_handle = process_boost(boost_handle, duration);
-        ALOGD("LAUNCH ENCODER-ON: %d MS", duration);
         int *resource_values = NULL;
         int resources = 0;
         resource_values = getPowerhint(DEFAULT_VIDEO_ENCODE_HINT_ID, &resources);
@@ -224,8 +218,8 @@ static int process_video_encode_hint(void *data)
 
 static int process_activity_launch_hint(void *data)
 {
-    // boost will timeout in 1.25s
-    int duration = 1250;
+    // boost will timeout in 5s
+    int duration = 5000;
     ATRACE_BEGIN("launch");
     if (sustained_performance_mode || vr_mode) {
         ATRACE_END();
@@ -248,9 +242,7 @@ static int process_activity_launch_hint(void *data)
             return HINT_NONE;
         }
     } else if (data == NULL  && launch_mode == 1) {
-        // framework release hints aren't necessarily reliable
-        // always wait the full duration
-        // release_request(launch_handle);
+        release_request(launch_handle);
         ATRACE_INT("launch_lock", 0);
         launch_mode = 0;
         ATRACE_END();
