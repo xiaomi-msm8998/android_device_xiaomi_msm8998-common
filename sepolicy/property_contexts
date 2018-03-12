@@ -2,6 +2,9 @@
 persist.sys.fp.                                               u:object_r:fingerprint_prop:s0
 ro.boot.fp.                                                   u:object_r:fingerprint_prop:s0
 
+# Perf
+sys.post_boot.                                                u:object_r:post_boot_prop:s0
+
 # Radio
 sys.fake_bs_flag0                                             u:object_r:system_radio_prop:s0
 sys.fake_bs_flag1                                             u:object_r:system_radio_prop:s0

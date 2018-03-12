@@ -5,3 +5,12 @@ genfscon sysfs /devices/soc/caa4000.qcom,fd                   u:object_r:sysfs_g
 
 # Power
 genfscon debugfs /wlan0                                       u:object_r:debugfs_wlan:s0
+
+# Perf
+genfscon sysfs /devices/soc/soc:qcom,cpubw                                    u:object_r:sysfs_devfreq:s0
+genfscon sysfs /devices/soc/soc:qcom,mincpubw                                 u:object_r:sysfs_devfreq:s0
+genfscon sysfs /class/devfreq                                                 u:object_r:sysfs_devfreq:s0
+genfscon sysfs /devices/soc/soc:qcom,memlat-cpu0                              u:object_r:sysfs_devfreq:s0
+genfscon sysfs /devices/soc/soc:qcom,memlat-cpu4                              u:object_r:sysfs_devfreq:s0
+
+genfscon sysfs /devices/virtual/graphics/fb0                                  u:object_r:sysfs_graphics:s0

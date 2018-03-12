@@ -305,7 +305,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.1-service-qti
+    android.hardware.power@1.1-service.xiaomi_msm8998
 
 # Properties
 include $(LOCAL_PATH)/vendor_prop.mk

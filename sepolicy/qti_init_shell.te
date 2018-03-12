@@ -1,1 +1,2 @@
 set_prop(qti_init_shell, sensors_panel_prop);
+set_prop(qti_init_shell, post_boot_prop)
