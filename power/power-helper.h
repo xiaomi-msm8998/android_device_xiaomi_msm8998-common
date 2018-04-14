@@ -97,6 +97,7 @@ struct stat_pair {
 void power_init(void);
 void power_hint(power_hint_t hint, void *data);
 void power_set_interactive(int on);
+void set_feature(feature_t feature, int state);
 int extract_platform_stats(uint64_t *list);
 int extract_wlan_stats(uint64_t *list);
 

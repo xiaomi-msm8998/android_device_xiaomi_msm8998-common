@@ -42,6 +42,7 @@ LOCAL_SRC_FILES += power-8998.c
 
 # Enable interaction boost all the time
 LOCAL_CFLAGS += -DINTERACTION_BOOST -Werror
+LOCAL_CFLAGS += -DTAP_TO_WAKE_NODE=\"$(TARGET_TAP_TO_WAKE_NODE)\"
 
 LOCAL_SHARED_LIBRARIES := \
     libbase \
