@@ -73,6 +73,10 @@ on property:sys.post_boot.parsed=1
     chown system system /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/bw_hwmon/hist_memory
     chown system system /sys/devices/soc/soc:qcom,cpubw/devfreq/soc:qcom,cpubw/bw_hwmon/hyst_length
 
+on post-fs
+    # set RLIMIT_MEMLOCK to 64MB
+    setrlimit 8 67108864 67108864
+
 on property:sys.boot_completed=1
     # Boot completed fs tuning
     write /sys/block/sda/queue/iostats 1
