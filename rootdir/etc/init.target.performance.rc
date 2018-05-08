@@ -89,6 +89,8 @@ on property:sys.boot_completed=1
     write /sys/block/sde/queue/iostats 1
     write /sys/block/sde/queue/nr_requests 128
     write /sys/block/sde/queue/read_ahead_kb 128
+    # Set the default IRQ affinity to the silver cluster.
+    write /proc/irq/default_smp_affinity f
     setprop sys.io.scheduler "cfq"
 
     # Set b.L scheduler parameters
