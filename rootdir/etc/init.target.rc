@@ -75,7 +75,7 @@ on late-fs
     start surfaceflinger
     start bootanim
     start vendor.hwcomposer-2-1
-    start vendor.configstore-hal-1-0
+    start vendor.configstore-hal
     start vendor.gralloc-2-0
 
     # Boot-time fs tuning
