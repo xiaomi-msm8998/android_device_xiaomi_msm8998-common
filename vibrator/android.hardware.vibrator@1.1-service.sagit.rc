@@ -1,0 +1,14 @@
+on early-boot
+    chown system system /sys/devices/virtual/timed_output/vibrator/vtg_default
+    chown system system /sys/devices/virtual/timed_output/vibrator/vtg_level
+    chown system system /sys/devices/virtual/timed_output/vibrator/vtg_max
+    chown system system /sys/devices/virtual/timed_output/vibrator/vtg_min
+    chmod 0644 /sys/devices/virtual/timed_output/vibrator/vtg_default
+    chmod 0644 /sys/devices/virtual/timed_output/vibrator/vtg_level
+    chmod 0444 /sys/devices/virtual/timed_output/vibrator/vtg_max
+    chmod 0444 /sys/devices/virtual/timed_output/vibrator/vtg_min
+
+service vibrator-1-1 /vendor/bin/hw/android.hardware.vibrator@1.1-service.sagit
+    class hal
+    user system
+    group system
