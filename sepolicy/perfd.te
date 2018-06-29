@@ -31,3 +31,5 @@ allow perfd sysfs_devfreq:file w_file_perms;
 
 r_dir_file(perfd, sysfs_kgsl)
 allow perfd sysfs_kgsl:file w_file_perms;
+
+get_prop(perfd, freq_prop)

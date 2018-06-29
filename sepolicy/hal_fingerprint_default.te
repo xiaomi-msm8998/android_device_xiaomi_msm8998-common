@@ -21,3 +21,6 @@ dontaudit hal_fingerprint_default sysfs_graphics:dir search;
 dontaudit hal_fingerprint_default sysfs_leds:dir search;
 
 set_prop(hal_fingerprint_default, fingerprint_prop);
+
+allow hal_fingerprint_default perfd:unix_stream_socket connectto;
+allow hal_fingerprint_default perfd_socket:sock_file write;
