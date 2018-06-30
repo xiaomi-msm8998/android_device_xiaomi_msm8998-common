@@ -42,6 +42,14 @@ vendor/bin/wcnss_filter
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 vendor/lib64/libbtnv.so
 
+# Bluetooth aptX (wahoo)
+lib64/libaptXHD_encoder.so|90f47f10af28b3ead143200cb4370b847c513127
+lib64/libaptX_encoder.so|0cebad28afcf29f931bdc2d24fce2730dc882ecf
+
+# Bluetooth LDAC (wahoo)
+lib64/libldacBT_abr.so|b9561fd6577409ddeacaec86ee3c17dccdc57263
+lib64/libldacBT_enc.so|123058c79944c34a2f07e87b405c75a830bb18bc
+
 # Camera
 lib/libMiCameraHal.so:vendor/lib/libMiCameraHal.so
 lib/libskia.so:vendor/lib/libmisk.so
@@ -516,7 +524,7 @@ vendor/lib64/libsns_low_lat_stream_stub.so
 vendor/lib64/sensors.ssc.so
 
 # Thermal
-vendor/bin/msm_irqbalance
+vendor/bin/msm_irqbalance|7ce3f35f7e0f12af1e2d36aa095d56a5ec88c51e
 vendor/bin/thermal-engine
 vendor/etc/thermal-engine-8998-high.conf
 vendor/etc/thermal-engine-8998-map.conf
