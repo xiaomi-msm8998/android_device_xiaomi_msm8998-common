@@ -18,8 +18,8 @@
 #define LOG_TAG "xiaomi_readmac"
 #define LOG_NDEBUG 0
 
-#include <cutils/log.h>
 #include <cutils/properties.h>
+#include <log/log.h>
 #include <private/android_filesystem_config.h>
 
 #include <sys/stat.h>
