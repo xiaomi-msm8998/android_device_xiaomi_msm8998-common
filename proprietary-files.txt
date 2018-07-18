@@ -52,7 +52,6 @@ lib64/libldacBT_enc.so|123058c79944c34a2f07e87b405c75a830bb18bc
 
 # Camera
 lib/libMiCameraHal.so:vendor/lib/libMiCameraHal.so
-lib/libskia.so:vendor/lib/libmisk.so
 lib/libtrueportrait.so:vendor/lib/libtrueportrait.so
 lib64/libblurbuster.so
 lib64/libhazebuster.so
