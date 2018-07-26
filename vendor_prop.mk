@@ -29,6 +29,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.vendor.audio.fluence.speaker=true \
 	persist.vendor.audio.fluence.voicecall=true \
 	persist.vendor.audio.fluence.voicerec=false \
+	persist.vendor.audio.hw.binder.size_kbyte=1024 \
 	persist.vendor.audio.ras.enabled=false \
 	persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxhd-aac \
 	ro.config.vc_call_vol_steps=11 \
