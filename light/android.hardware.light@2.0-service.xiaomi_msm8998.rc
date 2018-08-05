@@ -1,6 +1,7 @@
 on boot
     # White light
     chown system system /sys/class/leds/white/brightness
+    write /sys/class/leds/white/brightness 64
 
     chown system system /sys/class/leds/white/blink
     chown system system /sys/class/leds/white/duty_pcts
