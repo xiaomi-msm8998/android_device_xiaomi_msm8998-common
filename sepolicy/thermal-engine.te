@@ -1,6 +1,8 @@
 type_transition thermal-engine system_data_file:file thermal_data_file;
 type_transition thermal-engine socket_device:sock_file thermal_socket;
 
+allow thermal-engine proc_stat:file { getattr open read };;
+
 allow thermal-engine thermal_data_file:dir rw_dir_perms;
 allow thermal-engine thermal_data_file:file create_file_perms;
 
