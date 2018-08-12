@@ -79,9 +79,14 @@ CAMERA_MSM8998="$COMMON_BLOB_ROOT"/vendor/lib/hw/camera.msm8998.so
 sed -i "s|libminikin.so|libcamshim.so|g" "$CAMERA_MSM8998"
 
 #
-# Load camera watermark from vendor
+# Use updated libicuuc methods in libMiCameraHal
 #
 MI_CAMERA_HAL="$COMMON_BLOB_ROOT"/vendor/lib/libMiCameraHal.so
+sed -i "s|_ZN6icu_58|_ZN6icu_60|g" "$MI_CAMERA_HAL"
+
+#
+# Load camera watermark from vendor
+#
 sed -i "s|system/etc/dualcamera.png|vendor/etc/dualcamera.png|g" "$MI_CAMERA_HAL"
 
 #
