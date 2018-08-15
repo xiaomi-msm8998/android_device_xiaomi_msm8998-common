@@ -39,11 +39,9 @@
     <Hint type="0x1A00"> <!--interaction-->
         <Resource opcode="0x42C18000" value="0x14"/>      <!-- Top App schedtune boost to 20 -->
         <Resource opcode="0x4180C000" value="0x0"/>       <!-- CPUBW disable hysteresis -->
-        <Resource opcode="0x41800000" value="0x1F"/>      <!-- CPUBW min freq 412 MHz -->
     </Hint>
     <Hint type="0x1B00"> <!--boost-->
         <Resource opcode="0x4180C000" value="0x0"/>       <!-- CPUBW disable hysteresis -->
         <Resource opcode="0x40400000" value="0x1"/>       <!-- POWER_COLLAPSE -->
-        <Resource opcode="0x41800000" value="0x4E"/>      <!-- CPUBW min freq 1017 MHz -->
     </Hint>
 </Powerhint>
