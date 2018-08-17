@@ -73,6 +73,8 @@ lib64/libldacBT_abr.so|b9561fd6577409ddeacaec86ee3c17dccdc57263
 lib64/libldacBT_enc.so|123058c79944c34a2f07e87b405c75a830bb18bc
 
 # Camera
+lib/libcameraservice.so|a0b4b04347e54c33923fc8fb2ac48cfab8af4268
+lib64/libcameraservice.so|8984597c00b47505022fd99fc31c801aa47cacf8
 vendor/lib/libcamshim.so|e8a4cdaa62bfc90a633bf3fb60d904775f89b08b
 vendor/lib/libskia.so|ea7ae9671596617412105476d021948c615b60aa
 lib/libMiCameraHal.so:vendor/lib/libMiCameraHal.so
