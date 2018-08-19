@@ -70,6 +70,8 @@ lib64/libaptX_encoder.so|0cebad28afcf29f931bdc2d24fce2730dc882ecf
 
 # Camera
 lib/libMiCameraHal.so:vendor/lib/libMiCameraHal.so
+lib/libicuuc.so:vendor/lib/libicuuc-v27.so
+lib/libminikin.so:vendor/lib/libminikin-v27.so
 lib/libskia.so:vendor/lib/libskia.so
 lib/libtrueportrait.so:vendor/lib/libtrueportrait.so
 lib64/libblurbuster.so
