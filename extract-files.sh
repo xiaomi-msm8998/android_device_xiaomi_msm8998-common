@@ -90,6 +90,12 @@ sed -i "s|_ZN6icu_58|_ZN6icu_60|g" "$MI_CAMERA_HAL"
 sed -i "s|system/etc/dualcamera.png|vendor/etc/dualcamera.png|g" "$MI_CAMERA_HAL"
 
 #
+# Remove unused libcamera_client.so dependency in libsac.so
+#
+SAC="$COMMON_BLOB_ROOT"/vendor/lib/libsac.so
+patchelf --remove-needed libcamera_client.so "$SAC"
+
+#
 # Correct VZW IMS library location
 #
 QTI_VZW_IMS_INTERNAL="$COMMON_BLOB_ROOT"/vendor/etc/permissions/qti-vzw-ims-internal.xml
