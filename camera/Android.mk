@@ -25,3 +25,11 @@ LOCAL_SHARED_LIBRARIES := \
     android.hardware.graphics.mapper@2.0
 LOCAL_PROPRIETARY_MODULE := true
 include $(BUILD_SHARED_LIBRARY)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := libMiCameraHal
+LOCAL_MULTILIB := 32
+LOCAL_SRC_FILES := camera.c
+LOCAL_MODULE_TAGS := optional
+LOCAL_PROPRIETARY_MODULE := true
+include $(BUILD_SHARED_LIBRARY)

@@ -64,7 +64,6 @@ vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.fm@1.0_vendor.so
 
 # Camera
-lib/libMiCameraHal.so:vendor/lib/libMiCameraHal.so
 lib/libtrueportrait.so:vendor/lib/libtrueportrait.so
 lib64/libblurbuster.so
 lib64/libhazebuster.so
