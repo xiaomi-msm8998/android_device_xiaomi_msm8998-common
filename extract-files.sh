@@ -73,6 +73,12 @@ CAMERA2_SENSOR_MODULES="$COMMON_BLOB_ROOT"/vendor/lib/libmmcamera2_sensor_module
 sed -i "s|/system/etc/camera/|/vendor/etc/camera/|g" "$CAMERA2_SENSOR_MODULES"
 
 #
+# Replace libcamera_client with android.hardware.camera.common@1.0-helper
+#
+CAMERA_MSM8998="$COMMON_BLOB_ROOT"/vendor/lib/hw/camera.msm8998.so
+patchelf --replace-needed libcamera_client.so android.hardware.camera.common@1.0-helper.so "$CAMERA_MSM8998"
+
+#
 # Correct VZW IMS library location
 #
 QTI_VZW_IMS_INTERNAL="$COMMON_BLOB_ROOT"/vendor/etc/permissions/qti-vzw-ims-internal.xml
