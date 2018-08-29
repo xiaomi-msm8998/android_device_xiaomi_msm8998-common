@@ -350,6 +350,8 @@ PRODUCT_PACKAGES += \
 
 # Wifi
 PRODUCT_PACKAGES += \
+    ipacm \
+    IPACM_cfg.xml \
     libwpa_client \
     hostapd \
     readmac \
