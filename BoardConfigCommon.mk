@@ -197,7 +197,7 @@ TARGET_RELEASETOOLS_EXTENSIONS := $(PLATFORM_PATH)
 TARGET_RIL_VARIANT := caf
 
 # Security patch level
-VENDOR_SECURITY_PATCH := 2018-06-01
+VENDOR_SECURITY_PATCH := 2018-07-01
 
 # SELinux
 # include device/qcom/sepolicy/sepolicy.mk
