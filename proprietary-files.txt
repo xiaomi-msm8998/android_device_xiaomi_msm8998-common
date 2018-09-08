@@ -69,9 +69,8 @@ lib64/libaptXHD_encoder.so|90f47f10af28b3ead143200cb4370b847c513127
 lib64/libaptX_encoder.so|0cebad28afcf29f931bdc2d24fce2730dc882ecf
 
 # Camera
-vendor/lib/libcamshim.so|e8a4cdaa62bfc90a633bf3fb60d904775f89b08b
-vendor/lib/libskia.so|3d2c5fa3b810a902e0d9915dec37502d48ea5105
 lib/libMiCameraHal.so:vendor/lib/libMiCameraHal.so
+lib/libskia.so:vendor/lib/libskia.so
 lib/libtrueportrait.so:vendor/lib/libtrueportrait.so
 lib64/libblurbuster.so
 lib64/libhazebuster.so
