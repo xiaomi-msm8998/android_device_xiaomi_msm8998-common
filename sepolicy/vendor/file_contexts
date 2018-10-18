@@ -25,6 +25,7 @@
 
 # Power HAL
 /(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.2-service.xiaomi_msm8998-libperfmgr u:object_r:hal_power_default_exec:s0
+/sys/devices/virtual/graphics/fb0/idle_state                  u:object_r:sysfs_graphics:s0
 
 # Readmac
 /(vendor|system/vendor)/bin/readmac                           u:object_r:wcnss_service_exec:s0
