@@ -150,8 +150,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
     ro.vendor.qti.core_ctl_max_cpu=4 \
-    ro.vendor.qti.core_ctl_min_cpu=0 \
-    ro.vendor.qti.sys.fw.bg_apps_limit=60
+    ro.vendor.qti.core_ctl_min_cpu=0
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
