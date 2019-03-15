@@ -70,9 +70,6 @@ on post-fs-data
     # Create ipacm log dir
     mkdir /data/vendor/ipa 0770 radio radio
 
-    # Create QTI dir for logs
-    mkdir /data/vendor/dataqti 0770 radio radio
-
     # Create the directories used by CnE subsystem
     mkdir /data/vendor/connectivity 0771 radio radio
 
@@ -199,12 +196,6 @@ service vendor.ipacm /vendor/bin/ipacm
     class main
     user radio
     group radio inet
-    writepid /dev/cpuset/system-background/tasks
-
-service vendor.dataqti /vendor/bin/qti
-    class main
-    user radio
-    group radio oem_2901 diag usb net_admin
     writepid /dev/cpuset/system-background/tasks
 
 service vendor.sensors /vendor/bin/sensors.qti
