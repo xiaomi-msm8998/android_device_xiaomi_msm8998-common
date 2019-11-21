@@ -604,10 +604,10 @@ vendor/lib/libthermalclient.so
 vendor/lib64/libthermalclient.so
 vendor/lib64/libthermalioctl.so
 
-# Time services
--vendor/app/TimeService/TimeService.apk;:timeservice_app_cert-legacy-um
-vendor/bin/time_daemon
-vendor/lib64/libtime_genoff.so
+# Time services - from LA.UM.8.2.r1-04300-sdm660.0
+-vendor/app/TimeService/TimeService.apk;:timeservice_app_cert-legacy-um|4a37afd1395758d946580af184a738e3c657b1e2
+vendor/bin/time_daemon|1f0ab775a70bd863c0c59f999fcba2b6882d2a31
+vendor/lib64/libtime_genoff.so|c8e0bbc9c6b7b5beddba43bc4125a9eaeba7c79f
 
 # Wi-Fi
 vendor/bin/cnss-daemon
