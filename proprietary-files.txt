@@ -249,27 +249,27 @@ vendor/bin/dpmQmiMgr
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so
 vendor/lib64/libdpmqmihal.so
 
-# DRM and SEE
-vendor/bin/qseecomd
-vendor/lib64/libdrmfs.so
-vendor/lib64/libdrmtime.so
-vendor/lib64/libGPreqcancel_svc.so
-vendor/lib64/libGPreqcancel.so
-vendor/lib64/libkeymasterdeviceutils.so
-vendor/lib64/libkeymasterprovision.so
-vendor/lib64/libkeymasterutils.so
-vendor/lib64/libQSEEComAPI.so
-vendor/lib64/librpmb.so
-vendor/lib64/libStDrvInt.so
-vendor/lib64/libsecureui_svcsock.so
-vendor/lib64/libSecureUILib.so
-vendor/lib64/libspl.so
-vendor/lib64/libssd.so
+# DRM and SEE - from LA.UM.8.2.r1-05700-sdm660.0
+vendor/bin/qseecomd|a673f923a343a98007410022c1dc9acb5d440889
+vendor/lib64/libGPreqcancel.so|bfff7b7d51e917a16b9a15a27fb81e16d0359348
+vendor/lib64/libGPreqcancel_svc.so|d4216112bda75e1d3b06b679dcd8978da17dca93
+vendor/lib64/libQSEEComAPI.so|3e68ab8dc83089e5ff64ed2c31da52326c3fd9fe
+vendor/lib64/libSecureUILib.so|54ce5c719dfdeb0896187be4cf0903bf4e6c4ba7
+vendor/lib64/libStDrvInt.so|8de13b46e8f21016c0fffaec34b0a2bacfccec04
+vendor/lib64/libdrmfs.so|31df18a6a3ab7115394343e0e067a3983e8183d9
+vendor/lib64/libdrmtime.so|c5de0592da3645851c3a428ddbb0164228fcb4e4
+vendor/lib64/libkeymasterdeviceutils.so|b5d4819abb7dbd7908dfe7c6cfa5035e02b10383
+vendor/lib64/libkeymasterprovision.so|393670e87470ea913afe9987ac8ed1084a481afe
+vendor/lib64/libkeymasterutils.so|c67dce79bdc9628ba877d0e6343629020d9315c7
+vendor/lib64/librpmb.so|0b27e558cc20dffc76fdb578b0d5f38a0ee361c0
+vendor/lib64/libsecureui.so|740a910fc4a10f17dc405ce5e2bfc4e42d587a48
+vendor/lib64/libsecureui_svcsock.so|e364290497862270cd01d9be84f0141ea92e92f9
+vendor/lib64/libssd.so|d6758bd01b360be7bb68f35f56978a5e9a21d3c3
 
-# DRM (TUI)
-lib64/vendor.qti.hardware.tui_comm@1.0.so:vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so
-vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti
-vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc
+# DRM (TUI) - from LA.UM.8.2.r1-05700-sdm660.0
+vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|d4d025e0a12af87f65104fe07801517938733603
+vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
+vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|1ac676dca4c81094b254b62f1b608e471b385847
 
 # DRM (Widevine)
 vendor/bin/hw/android.hardware.drm@1.1-service.widevine
