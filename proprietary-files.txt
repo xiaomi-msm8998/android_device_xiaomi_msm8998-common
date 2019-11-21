@@ -21,13 +21,13 @@ vendor/lib/rfsa/adsp/libsns_low_lat_stream_skel.so
 vendor/lib/rfsa/adsp/libvpp_frc.so
 vendor/lib/rfsa/adsp/libvpp_svc_skel.so
 
-# Alarm
-lib64/vendor.qti.hardware.alarm@1.0.so:vendor/lib64/vendor.qti.hardware.alarm@1.0.so
--vendor/app/PowerOffAlarm/PowerOffAlarm.apk
-vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service
-vendor/bin/power_off_alarm
-vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
-vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
+# Alarm - from LA.UM.8.2.r1-04300-sdm660.0
+-product/app/PowerOffAlarm/PowerOffAlarm.apk|2399da8803ff7229476611f371fc435f48138881
+vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|faccc2a7d94d486c2f61a5fe85f5c4598b4147a7
+vendor/bin/power_off_alarm|9f800336a28ad1ad111f164b8c779313cddc98c1
+vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|c9877b6cae0353d5fdea5bc23dba77101b3d6980
+vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|1e2631850cc97dfedbde50a9d0d55c8d14881b44
+vendor/lib64/vendor.qti.hardware.alarm@1.0.so|e86242990b1e00c6d231f912f218e7ae137394b9
 
 # ANT+ - from LA.UM.8.2.r1-04300-sdm660.0
 -lib/libantradio.so|37c36369eeab19d5e6266d9d25ae0de9bb59502d
