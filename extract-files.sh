@@ -59,11 +59,11 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-    lib64/libdpmframework.so)
-        patchelf --add-needed "libshim_dpmframework.so" "${2}"
-        ;;
     lib64/libwfdnative.so)
         patchelf --remove-needed "android.hidl.base@1.0.so" "${2}"
+        ;;
+    product/lib64/libdpmframework.so)
+        patchelf --add-needed "libshim_dpmframework.so" "${2}"
         ;;
     vendor/etc/permissions/qti_libpermissions.xml)
         sed -i 's|name=\"android.hidl.manager-V1.0-java|name=\"android.hidl.manager@1.0-java|g' "${2}"
