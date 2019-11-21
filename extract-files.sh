@@ -68,9 +68,6 @@ function blob_fixup() {
     vendor/etc/permissions/qti_libpermissions.xml)
         sed -i 's|name=\"android.hidl.manager-V1.0-java|name=\"android.hidl.manager@1.0-java|g' "${2}"
         ;;
-    vendor/etc/permissions/qcrilhook.xml)
-        sed -i 's|/system/framework/qcrilhook.jar|/vendor/framework/qcrilhook.jar|g' "${2}"
-        ;;
     vendor/lib/hw/camera.msm8998.so)
         patchelf --remove-needed "android.hidl.base@1.0.so" "${2}"
         ;;
