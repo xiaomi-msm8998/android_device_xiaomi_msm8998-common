@@ -276,10 +276,10 @@ vendor/bin/hw/vendor.qti.hardware.tui_comm@1.0-service-qti|a0d692fe10ef9dc447949
 vendor/etc/init/vendor.qti.hardware.tui_comm@1.0-service-qti.rc|2cfc563d7e1579374f001c94588fae7835a12ffc
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|39843e1272683d29aee9662d5f72d3cbbad168f5
 
-# DRM (Widevine)
-vendor/bin/hw/android.hardware.drm@1.1-service.widevine
-vendor/etc/init/android.hardware.drm@1.1-service.widevine.rc
-vendor/lib64/libwvhidl.so
+# DRM (Widevine) - from Pixel 2 QP1A.191105.004
+vendor/bin/hw/android.hardware.drm@1.2-service.widevine|14a8d893565da453a3b692673cc672deb64a1f61
+vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc|e3cb732c0bd519988100675edf385d947abf5f6c
+vendor/lib/libwvhidl.so|bf3aba3ca232ca90ec248353449da84f10cd330e
 
 # Gatekeeper
 vendor/lib64/hw/gatekeeper.msm8998.so
