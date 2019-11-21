@@ -29,12 +29,12 @@ vendor/bin/power_off_alarm
 vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 
-# ANT+ - from LA.UM.7.2.r1-06900-sdm660.0
--lib/libantradio.so|b6b7b93dfa155de37d755542a0d66cc9f77e256c
-lib64/com.qualcomm.qti.ant@1.0.so|33d353a1077c70c3d7c013938b092e93a18d5b58
--lib64/libantradio.so|def8c83cab05b53fe70754f23cf475240a8358fd
-vendor/lib64/com.qualcomm.qti.ant@1.0.so|5779ba85ae23ede7552a768afb8042d72f71afe2
-vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so|94729946e6ba94dd5d24c0495661efadc7ab782e
+# ANT+ - from LA.UM.8.2.r1-04300-sdm660.0
+-lib/libantradio.so|37c36369eeab19d5e6266d9d25ae0de9bb59502d
+-lib64/libantradio.so|43f6105678c082216f1606d8dd43fa1b0b753d7e
+product/lib64/com.qualcomm.qti.ant@1.0.so|452f459f04e5d819bf0325f83eaa14e0337a3c13
+vendor/lib64/com.qualcomm.qti.ant@1.0.so|cd400d59d68aad8e547487de9c3f49cefd4d2fca
+vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so|aa08f9ec51392ed841f60ad08b7f083312c8c5ee
 
 # Audio libraries
 vendor/lib/libacdb-fts.so
@@ -48,12 +48,14 @@ vendor/lib/libqtigef.so
 vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libdirac.so
 
-# Bluetooth
-vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
-vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
-
-# Bluetooth - from LA.UM.7.2.r1-06900-sdm660.0
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|514226960669db32e44a9457e6de7c07ac70ec1b
+# Bluetooth - from LA.UM.8.2.r1-04300-sdm660.0
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|57a0a575a2b1b96176fda1bcb84ea8371c4070d1
+vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|a979981c55f3dcaf6cf2212e71b901ca4d58b959
+vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|1d4a9d612e0f39b09aeef1d52b153f30ad409c07
+vendor/lib64/libbtnv.so|b58a40965697418c7b4809026bba17bd51bfb2ef
+vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|0a1f3b4bd383ed547e667087c0aab922efee3473
+vendor/lib64/vendor.qti.hardware.btconfigstore@1.0.so|f5043d5f1bb02d18e940190f31017d2a1ed97de9
+vendor/lib64/vendor.qti.hardware.fm@1.0.so|fb0eff9ce52c5d2a073253f7c300bc9b54c85684
 
 # Bluetooth aptX(HD) - from walleye QP1A.190711.020
 product/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
