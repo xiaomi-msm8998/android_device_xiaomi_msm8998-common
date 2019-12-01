@@ -371,6 +371,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
+# TextClassifier smart selection model files
+PRODUCT_PACKAGES += \
+    textclassifier.bundle1
+
+# Trust HAL
+PRODUCT_PACKAGES += \
+    vendor.lineage.trust@1.0-service
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service
@@ -380,13 +388,11 @@ PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl \
     android.hardware.vibrator@1.0-service
 
-# Trust HAL
+# VNDK
 PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
-
-# TextClassifier smart selection model files
-PRODUCT_PACKAGES += \
-    textclassifier.bundle1
+    libdng_sdk.vendor_32 \
+    libstdc++.vendor_32 \
+    vndk-ext
 
 # Wifi
 PRODUCT_PACKAGES += \
