@@ -96,8 +96,14 @@ function blob_fixup() {
     vendor/lib/libmpbase.so)
         patchelf --remove-needed "libandroid.so" "${2}"
         ;;
+    vendor/lib/sensors.ssc.so)
+        sed -i 's/\/persist\/PRSensorData.txt/\/vendor\/etc\/sensors\/S.txt/g' "${2}"
+        ;;
     vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so)
         sed -i 's/\/persist\/wlan_bt\/bt.mac/\/vendor\/etc\/bt\/bt.mac\x0\x0/g' "${2}"
+        ;;
+    vendor/lib64/sensors.ssc.so)
+        sed -i 's/\/persist\/PRSensorData.txt/\/vendor\/etc\/sensors\/S.txt/g' "${2}"
         ;;
     esac
 }
