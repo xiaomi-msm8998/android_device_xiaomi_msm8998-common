@@ -96,6 +96,12 @@ function blob_fixup() {
     vendor/lib/libmpbase.so)
         patchelf --remove-needed "libandroid.so" "${2}"
         ;;
+    vendor/lib/sensors.ssc.so)
+        sed -i 's/\/persist\/PRSensorData.txt/\/vendor\/etc\/sensors\/S.txt/g' "${2}"
+        ;;
+    vendor/lib64/sensors.ssc.so)
+        sed -i 's/\/persist\/PRSensorData.txt/\/vendor\/etc\/sensors\/S.txt/g' "${2}"
+        ;;
     esac
 }
 
