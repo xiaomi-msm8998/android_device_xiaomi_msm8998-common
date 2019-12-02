@@ -113,4 +113,13 @@ $(EGL_SYMLINK): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(EGL_SYMLINK)
 
+PERSIST_BTMAC_SYMLINK := $(TARGET_OUT_VENDOR)/etc/bt/bt.mac
+$(PERSIST_BTMAC_SYMLINK): $(LOCAL_INSTALLED_MODULE)
+	@echo "Bluetooth Mac link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /mnt/vendor/persist/wlan_bt/bt.mac $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(PERSIST_BTMAC_SYMLINK)
+
 endif
