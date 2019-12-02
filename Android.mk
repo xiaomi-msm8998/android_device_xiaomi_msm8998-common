@@ -113,4 +113,13 @@ $(EGL_SYMLINK): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(EGL_SYMLINK)
 
+PERSIST_SENSORS_SYMLINK := $(TARGET_OUT_VENDOR)/etc/sensors/S.txt
+$(PERSIST_SENSORS_SYMLINK): $(LOCAL_INSTALLED_MODULE)
+	@echo "Sensors calibration file link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /mnt/vendor/persist/PRSensorData.txt $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(PERSIST_SENSORS_SYMLINK)
+
 endif
