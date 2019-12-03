@@ -53,6 +53,8 @@ BOARD_KERNEL_CMDLINE += service_locator.enable=1
 BOARD_KERNEL_CMDLINE += swiotlb=2048
 BOARD_KERNEL_CMDLINE += loop.max_part=7
 
+SELINUX_IGNORE_NEVERALLOWS := true
+
 # Platform
 TARGET_BOARD_PLATFORM := msm8998
 
