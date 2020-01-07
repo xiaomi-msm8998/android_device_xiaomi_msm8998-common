@@ -173,10 +173,6 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-service \
     android.hardware.renderscript@1.0-impl
 
-# Doze
-PRODUCT_PACKAGES += \
-    XiaomiDoze
-
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl \
@@ -282,6 +278,10 @@ PRODUCT_PACKAGES += \
     libOmxVdec \
     libOmxVenc \
     libstagefrighthw
+
+# ParanoidDoze
+PRODUCT_PACKAGES += \
+    ParanoidDoze
 
 # Power
 PRODUCT_PACKAGES += \
