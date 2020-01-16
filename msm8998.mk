@@ -290,7 +290,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service-qti
+    android.hardware.power@1.2-service
 
 # Properties
 include $(LOCAL_PATH)/system_prop.mk
