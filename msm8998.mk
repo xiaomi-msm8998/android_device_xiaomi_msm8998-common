@@ -286,7 +286,7 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service-qti
+    android.hardware.power@1.2-service
 
 # Properties
 include $(LOCAL_PATH)/vendor_prop.mk
