@@ -25,6 +25,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     audio.offload.video=true \
     audio.sys.noisy.broadcast.delay=600 \
     audio.sys.offload.pstimeout.secs=3 \
+    persist.audio.dirac.speaker=true \
     persist.vendor.audio.fluence.speaker=true \
     persist.vendor.audio.fluence.voicecall=true \
     persist.vendor.audio.fluence.voicerec=false \
