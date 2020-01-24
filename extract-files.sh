@@ -68,6 +68,10 @@ function blob_fixup() {
     vendor/etc/permissions/qti_libpermissions.xml)
         sed -i 's|name=\"android.hidl.manager-V1.0-java|name=\"android.hidl.manager@1.0-java|g' "${2}"
         ;;
+    vendor/lib/hw/audio.primary.msm8998.so)
+        patchelf --replace-needed "libtinycompress_vendor.so" "libtinycompress.so" "${2}"
+        patchelf --replace-needed "libcutils.so" "libprocessgroup.so" "${2}"
+        ;;
     vendor/lib/hw/camera.msm8998.so)
         patchelf --remove-needed "android.hidl.base@1.0.so" "${2}"
         ;;
@@ -98,6 +102,10 @@ function blob_fixup() {
         ;;
     vendor/lib/sensors.ssc.so)
         sed -i 's/\/persist\/PRSensorData.txt/\/vendor\/etc\/sensors\/S.txt/g' "${2}"
+        ;;
+    vendor/lib64/hw/audio.primary.msm8998.so)
+        patchelf --replace-needed "libtinycompress_vendor.so" "libtinycompress.so" "${2}"
+        patchelf --replace-needed "libcutils.so" "libprocessgroup.so" "${2}"
         ;;
     vendor/lib64/sensors.ssc.so)
         sed -i 's/\/persist\/PRSensorData.txt/\/vendor\/etc\/sensors\/S.txt/g' "${2}"

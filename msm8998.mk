@@ -98,7 +98,6 @@ PRODUCT_BOOT_JARS += \
 # Audio
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
-    audio.primary.msm8998 \
     audio.r_submix.default \
     audio.usb.default \
 
@@ -107,7 +106,8 @@ PRODUCT_PACKAGES += \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-    libvolumelistener \
+    libtinycompress \
+    libvolumelistener
 
 PRODUCT_PACKAGES += \
     android.hardware.audio.effect@5.0-impl \
