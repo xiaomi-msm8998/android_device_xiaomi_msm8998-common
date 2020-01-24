@@ -1,3 +1,9 @@
+# Dirac Audio
+persist.audio.dirac.eq                                        u:object_r:vendor_audio_prop:s0
+persist.audio.dirac.headset                                   u:object_r:vendor_audio_prop:s0
+persist.audio.dirac.music.state                               u:object_r:vendor_audio_prop:s0
+persist.audio.dirac.speaker                                   u:object_r:vendor_audio_prop:s0
+
 # Camera
 camera.dual.mode                                              u:object_r:camera_prop:s0
 persist.camera.                                               u:object_r:camera_prop:s0
