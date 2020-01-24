@@ -1,3 +1,12 @@
+# Dirac Audio
+persist.audio.dirac.speaker                                   u:object_r:vendor_audio_prop:s0
+persist.vendor.audio.hifi                                     u:object_r:vendor_audio_prop:s0
+persist.vendor.audio.sfx.hd.eq                                u:object_r:vendor_audio_prop:s0
+persist.vendor.audio.sfx.hd.music.state                       u:object_r:vendor_audio_prop:s0
+persist.vendor.audio.sfx.hd.type                              u:object_r:vendor_audio_prop:s0
+persist.vendor.audio.sfx.mode                                 u:object_r:vendor_audio_prop:s0
+persist.vendor.audio.sfx.spk.stereomode.state                 u:object_r:vendor_audio_prop:s0
+
 # Camera
 camera.dual.mode                                              u:object_r:camera_prop:s0
 persist.camera.                                               u:object_r:camera_prop:s0
