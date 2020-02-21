@@ -57,6 +57,11 @@ vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|2b9bc01c02e07079e8747
 vendor/lib64/libbtnv.so|a6793a7b93fa607fcec39da7479566f84ed39aa4
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|9b7ae20ce9d6d2a67fdac94268cec441278cca3d
 
+# Bluetoothx Audio - from LA.UM.8.2.r1-05700-sdm660.0
+vendor/lib/btaudio_offload_if.so|b001242c7b7b117c28abbfdd037eec3ed66112cf
+vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so|b32776d28ea0dc664e1a0fefe8adcd56248f68c7
+vendor/lib/libbluetooth_audio_session_qti.so|230a16542e721d13577f4da4658bf9e763cebba3
+
 # Camera
 lib/libicuuc.so:vendor/lib/libicuuc-v28.so
 lib/libminikin.so:vendor/lib/libminikin-v28.so
