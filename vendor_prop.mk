@@ -147,8 +147,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # ParanoidDoze
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.sensor.proximity=true \
-    ro.sensor.pickup=xiaomi.sensor.pickup
+    ro.sensor.proximity=true
 
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
