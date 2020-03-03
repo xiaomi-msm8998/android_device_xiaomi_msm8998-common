@@ -28,8 +28,6 @@ persist.vendor.sys.pay.ifaa                                   u:object_r:vendor_
 
 # Radio
 ro.build.software.version                                     u:object_r:qcom_ims_prop:s0
-ril.fake_bs_flag0                                             u:object_r:vendor_radio_prop:s0
-ril.fake_bs_flag1                                             u:object_r:vendor_radio_prop:s0
 
 # Recovery
 ro.build.expect.firmware                                      u:object_r:exported_default_prop:s0
