@@ -191,7 +191,7 @@ on post-fs-data
     mkdir /data/vendor/thermal/config 0771 root system
 
     # Start RIL daemon
-    start ril-daemon
+    start vendor.ril-daemon
 
 on property:sys.boot_completed=1
     # Enable UFS powersaving
