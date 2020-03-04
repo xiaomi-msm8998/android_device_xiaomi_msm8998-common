@@ -49,12 +49,11 @@ vendor/lib/soundfx/libasphere.so
 vendor/lib/soundfx/libdirac.so
 
 # Bluetooth - from LA.UM.8.2.r1-05700-sdm660.0
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|dce7c7298b1801f6a037dc3e4597af56e3649bd0
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|f09639e8906be67702cd99c1cb8b22c087294885
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|a979981c55f3dcaf6cf2212e71b901ca4d58b959
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|2b9bc01c02e07079e8747b3aff43ce58431d3803
 vendor/lib64/libbtnv.so|a6793a7b93fa607fcec39da7479566f84ed39aa4
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|9b7ae20ce9d6d2a67fdac94268cec441278cca3d
-vendor/lib64/vendor.qti.hardware.fm@1.0.so|9c1b952043c7722fd27bfd971ecebb2584671862
 
 # Camera
 lib/libicuuc.so:vendor/lib/libicuuc-v28.so
