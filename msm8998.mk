@@ -152,6 +152,9 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     vendor.qti.hardware.btconfigstore@1.0.vendor
 
+# Bluetooth aptX(HD)
+include vendor/qcom/common/bt/qti-bt.mk
+
 # Camera
 PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0_32 \
