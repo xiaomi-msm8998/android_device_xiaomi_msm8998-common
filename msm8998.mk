@@ -291,6 +291,9 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.sensor.proximity=true \
     ro.sensor.pickup=android.sensor.tilt_detector
 
+# Perf
+include vendor/qcom/common/perf/qti-perf.mk
+
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2-service
