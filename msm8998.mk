@@ -294,10 +294,6 @@ PRODUCT_PACKAGES += \
 # Perf
 include vendor/qcom/common/perf/qti-perf.mk
 
-# Power
-PRODUCT_PACKAGES += \
-    android.hardware.power@1.2-service-qti
-
 # Properties
 include $(LOCAL_PATH)/system_prop.mk
 include $(LOCAL_PATH)/vendor_prop.mk
