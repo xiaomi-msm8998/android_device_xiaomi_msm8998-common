@@ -298,10 +298,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Perf
 include vendor/qcom/common/perf/qti-perf.mk
 
-# Power
-PRODUCT_PACKAGES += \
-    power.qcom
-
 # Properties
 include $(LOCAL_PATH)/system_prop.mk
 include $(LOCAL_PATH)/vendor_prop.mk
