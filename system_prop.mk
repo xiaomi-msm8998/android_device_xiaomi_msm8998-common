@@ -14,6 +14,16 @@
 # limitations under the License.
 #
 
+# Audio
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.bluetooth.a2dp_offload.cap=sbc-aac-aptx-aptxhd-ldac \
+    persist.bluetooth.a2dp_offload.disabled=false \
+    ro.bluetooth.a2dp_offload.supported=true
+
+# Bluetooth
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.bluetooth.library_name=libbluetooth_qti.so
+
 # Camera
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     vendor.camera.aux.packagelist=com.android.camera,org.codeaurora.snapcam

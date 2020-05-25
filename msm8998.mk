@@ -104,6 +104,7 @@ PRODUCT_PACKAGES += \
     audio.usb.default \
 
 PRODUCT_PACKAGES += \
+    liba2dpoffload \
     libaudio-resampler \
     libhfp \
     libqcompostprocbundle \
@@ -116,7 +117,8 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@5.0-impl \
     android.hardware.audio@2.0-service \
     android.hardware.bluetooth.audio@2.0-impl \
-    android.hardware.soundtrigger@2.2-impl
+    android.hardware.soundtrigger@2.2-impl \
+    vendor.qti.hardware.bluetooth_audio@2.0.vendor
 
 PRODUCT_PACKAGES += \
     tinymix
@@ -146,6 +148,7 @@ PRODUCT_PACKAGES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
+    libbluetooth_qti \
     vendor.qti.hardware.btconfigstore@1.0.vendor
 
 # Camera
@@ -301,7 +304,7 @@ PRODUCT_PACKAGES += \
     libjson
 
 # QTI common
-TARGET_COMMON_QTI_COMPONENTS := bt
+# TARGET_COMMON_QTI_COMPONENTS := bt
 
 # Ramdisk
 PRODUCT_PACKAGES += \
