@@ -21,4 +21,7 @@
     <bool name="profile_supported_hid_device">false</bool>
     <bool name="profile_supported_avrcp_target">false</bool>
     <bool name="profile_supported_ba">true</bool>
+
+    <!-- Disable LDAC for now -->
+    <integer name="a2dp_source_codec_priority_ldac">-1</integer>
 </resources>
