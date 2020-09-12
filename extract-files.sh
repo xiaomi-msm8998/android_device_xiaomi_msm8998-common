@@ -134,3 +134,5 @@ for i in $(grep -rn 'libhidltransport.so\|libhwbinder.so' ../../../vendor/xiaomi
 	patchelf --remove-needed "libhwbinder.so" "$i"
 	patchelf --remove-needed "libhidltransport.so" "$i"
 done
+
+python3 "${MY_DIR}/../${DEVICE_COMMON}/extract-files.sh"
