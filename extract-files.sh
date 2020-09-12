@@ -124,3 +124,13 @@ if [ -s "${MY_DIR}/../${DEVICE}/proprietary-files.txt" ]; then
 fi
 
 "${MY_DIR}/setup-makefiles.sh"
+
+for i in $(grep -rn 'libhidltransport.so\|libhwbinder.so' ../../../vendor/xiaomi/"${DEVICE_COMMON}"/proprietary | awk '{print $4}'); do
+	patchelf --remove-needed "libhwbinder.so" "$i"
+	patchelf --remove-needed "libhidltransport.so" "$i"
+done
+
+for i in $(grep -rn 'libhidltransport.so\|libhwbinder.so' ../../../vendor/xiaomi/"${DEVICE}"/proprietary | awk '{print $4}'); do
+	patchelf --remove-needed "libhwbinder.so" "$i"
+	patchelf --remove-needed "libhidltransport.so" "$i"
+done
