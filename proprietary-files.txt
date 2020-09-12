@@ -30,11 +30,11 @@ vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so
 
 # ANT+ - from LA.UM.7.2.r1-06900-sdm660.0
--lib/libantradio.so|b6b7b93dfa155de37d755542a0d66cc9f77e256c
-lib64/com.qualcomm.qti.ant@1.0.so|33d353a1077c70c3d7c013938b092e93a18d5b58
--lib64/libantradio.so|def8c83cab05b53fe70754f23cf475240a8358fd
-vendor/lib64/com.qualcomm.qti.ant@1.0.so|5779ba85ae23ede7552a768afb8042d72f71afe2
-vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so|94729946e6ba94dd5d24c0495661efadc7ab782e
+-lib/libantradio.so|766169ae4fb5147fab098ed27582247e3e2ca298
+lib64/com.qualcomm.qti.ant@1.0.so|5cc49a37b9a13d544a8123517d0621de31851d99
+-lib64/libantradio.so|aed07cbf2bdab3a8d8fd7aa37f866de7d0ac2efd
+vendor/lib64/com.qualcomm.qti.ant@1.0.so|ae196815fe50718121d8c054da00c97354c92bd0
+vendor/lib64/hw/com.qualcomm.qti.ant@1.0-impl.so|2e3e248114225e1fd31c34f2c16a11c551ba630c
 
 # Audio libraries
 vendor/lib/libacdb-fts.so
@@ -53,7 +53,7 @@ vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so
 
 # Bluetooth - from LA.UM.7.2.r1-06900-sdm660.0
-vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|514226960669db32e44a9457e6de7c07ac70ec1b
+vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|164fffada92e8049603a940c37fba902b6509414
 
 # Bluetooth aptX(HD) - from walleye QP1A.190711.020
 product/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
@@ -600,7 +600,7 @@ etc/init/wfdservice.rc|311bfdd1675e56499662f39455536b75b78477bb
 etc/wfdconfig.xml|60a210d323f3f65dd1424cfd517295c522824b7b
 etc/wfdconfigsink.xml|134a86f74d9c374ce9081bff92c02515712a7f12
 -framework/WfdCommon.jar|02223348741e43c756e9d2a84b80575711421f2e
-lib/com.qualcomm.qti.wifidisplayhal@1.0.so|1a39309ebad904da8864a63749dc7f8984f95154
+lib/com.qualcomm.qti.wifidisplayhal@1.0.so|c49c392e21208e635b3db7c54511cfd4f9be02e3
 lib/libFileMux.so|e3c1814bba37545af988eaf0d364c50a944100a1
 lib/libOmxMux.so|2ddc80bde73590cd2ca06ab350062837ff136341
 lib/libmmosal.so|90423946d3ddf909e760c8eefe0904eee2ffdfec
@@ -613,10 +613,10 @@ lib/libwfdcommonutils.so|d47eccb92989496d3eaea9253e4445ec39c1883b
 lib/libwfdconfigutils.so|99988191fdccb4b9a0ef806da9b4f0348f1c62ea
 lib/libwfdmminterface.so|a95dd38f7ed49dfa83ce86778467c8725228e42a
 lib/libwfdmmsink.so|199937f2932e92a7285e4f3ea0d88ddec7b943d5
-lib/libwfdmmsrc.so|1530432479bf3c34d2ab1a3150c9b5e0a396cc33
+lib/libwfdmmsrc.so|160cf0eae3447bfe1934a3df5e5827c4ebc92efa
 lib/libwfdrtsp.so|42e1dc939d74e9cbc97eebda06b9fd84cae9b90c
 lib/libwfdservice.so|ddb435c80c1d7ed914d49723cb46a44585290f23
-lib/libwfdsm.so|5043d0087fee42459be79d1534510dff67a9b06e
+lib/libwfdsm.so|218f53d5b0e0d0b94dc35a8a791e3f16b578ebee
 lib/libwfduibcinterface.so|a2f4d9fc3aad6f93b14772984b1ddef3732514a0
 lib/libwfduibcsink.so|e89faaec71d5e7edf9ae9fc012f00711eefc5885
 lib/libwfduibcsinkinterface.so|3a82782c6f662b6359856db3e9ac1633cb367614
@@ -624,7 +624,7 @@ lib/libwfduibcsrc.so|7fc43fdb9406c3182d8425c324a45ad592242183
 lib/libwfduibcsrcinterface.so|49aa058eda268b9bf18c71b280a17de76b82ba69
 lib64/libmmosal.so|8b627702ea24d3b313a0103444af63918f8149f4
 lib64/libwfdclient.so|e6954d14a794d457325c2cf9a5daa0392a4c34ec
-lib64/libwfdnative.so|aeb793285dd721611039d5f3ffbe9b85c79b1da4
+lib64/libwfdnative.so|0d67a107290ceda7f6b3ef2266d586b293348001
 -priv-app/WfdService/WfdService.apk|dc8ba0adf8c1d5327d82dbae832523f486e61a69
 
 # WFD (vendor)
