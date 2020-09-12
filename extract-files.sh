@@ -59,6 +59,9 @@ fi
 
 function blob_fixup() {
     case "${1}" in
+    etc/init/dpmd.rc)
+        echo "    disabled" >> "${2}"
+        ;;
     lib64/libwfdnative.so)
         patchelf --remove-needed "android.hidl.base@1.0.so" "${2}"
         ;;
