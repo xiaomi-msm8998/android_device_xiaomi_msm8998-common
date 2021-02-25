@@ -48,6 +48,8 @@ BOARD_KERNEL_CMDLINE += service_locator.enable=1
 BOARD_KERNEL_CMDLINE += swiotlb=2048
 BOARD_KERNEL_CMDLINE += loop.max_part=7
 
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+
 # Platform
 TARGET_BOARD_PLATFORM := msm8998
 
@@ -126,7 +128,7 @@ TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_xiaomi
 TARGET_RELEASETOOLS_EXTENSIONS := $(PLATFORM_PATH)
 
 # RIL
-TARGET_USES_OLD_MNC_FORMAT := true
+ENABLE_VENDOR_RIL_SERVICE := true
 
 # Security patch level
 VENDOR_SECURITY_PATCH := 2019-09-01

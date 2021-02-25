@@ -19,6 +19,15 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     vendor.camera.aux.packagelist=com.android.camera,org.lineageos.snap
 
 # Radio
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.radio.NO_STAPA=1 \
-    persist.radio.VT_HYBRID_ENABLE=1
+    persist.radio.VT_CAM_INTERFACE=2 \
+    persist.radio.VT_HYBRID_ENABLE=1 \
+    persist.vendor.qti.telephony.vt_cam_interface=1 \
+    persist.vendor.radio.atfwd.start=true \
+    persist.vendor.radio.data_con_rprt=1 \
+    persist.vendor.radio.snapshot_enabled=1 \
+    persist.vendor.radio.snapshot_timer=5 \
+    rild.libpath=/system/vendor/lib64/libril-qc-hal-qmi.so \
+    ril.subscription.types=NV,RUIM \
+    DEVICE_PROVISIONED=1

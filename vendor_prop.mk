@@ -114,6 +114,12 @@ PRODUCT_PRODUCT_PROPERTIES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.cne.feature=1
 
+# Data modules
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.vendor.data.iwlan.enable=true \
+    persist.vendor.data.mode=concurrent \
+    ro.telephony.iwlan_operation_mode=legacy
+
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.enable_gl_backpressure=1 \
@@ -156,19 +162,16 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.multisim.config=dsds \
-    persist.vendor.data.mode=concurrent \
     persist.vendor.radio.apm_sim_not_pwdn=1 \
     persist.vendor.radio.custom_ecc=1 \
-    persist.vendor.radio.force_on_dc=true \
     persist.vendor.radio.rat_on=combine \
-    persist.vendor.radio.redir_party_num=1 \
-    persist.vendor.radio.report_codec=1 \
     persist.vendor.radio.sib16_support=1 \
     ro.telephony.default_cdma_sub=0 \
-    ro.telephony.default_network=22,22 \
+    ro.telephony.default_network=9,9 \
     ro.vendor.use_data_netmgrd=true \
     telephony.lteOnCdmaDevice=1 \
-    vendor.rild.libpath=/vendor/lib64/libril-wrapper.so \
+    vendor.rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so \
+    rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so \
     vendor.voice.path.for.pcm.voip=true
 
 # Sensors
