@@ -134,18 +134,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.perf_hint_window=50 \
     vendor.gralloc.enable_fb_ubwc=1
 
-# DPM
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.dpm.feature=1 \
-    persist.vendor.dpm.nsrm.bkg.evt=3955
-
 # FRP
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.frp.pst=/dev/block/platform/soc/1da4000.ufshc/by-name/frp
-
-# IMS
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.qti.telephony.vt_cam_interface=1
 
 # Media
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -162,16 +153,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.radio.multisim.config=dsds \
+    persist.sys.fflag.override.settings_network_and_internet_v2=true \
     persist.vendor.radio.apm_sim_not_pwdn=1 \
     persist.vendor.radio.custom_ecc=1 \
+    persist.vendor.radio.data_con_rprt=1 \
+    persist.vendor.radio.procedure_bytes=SKIP \
     persist.vendor.radio.rat_on=combine \
+    persist.vendor.radio.redir_party_num=1 \
+    persist.vendor.radio.report_codec=1 \
     persist.vendor.radio.sib16_support=1 \
-    ro.telephony.default_cdma_sub=0 \
-    ro.telephony.default_network=9,9 \
     ro.vendor.use_data_netmgrd=true \
-    telephony.lteOnCdmaDevice=1 \
-    vendor.rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so \
-    rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so \
+    vendor.rild.libpath=/vendor/lib64/libril-qc-qmi-1.so \
     vendor.voice.path.for.pcm.voip=true
 
 # Sensors

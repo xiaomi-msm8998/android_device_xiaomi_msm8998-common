@@ -20,14 +20,25 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Radio
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.radio.multisim.config=dsds \
     persist.radio.NO_STAPA=1 \
     persist.radio.VT_CAM_INTERFACE=2 \
     persist.radio.VT_HYBRID_ENABLE=1 \
-    persist.vendor.qti.telephony.vt_cam_interface=1 \
-    persist.vendor.radio.atfwd.start=true \
-    persist.vendor.radio.data_con_rprt=1 \
-    persist.vendor.radio.snapshot_enabled=1 \
-    persist.vendor.radio.snapshot_timer=5 \
-    rild.libpath=/system/vendor/lib64/libril-qc-hal-qmi.so \
-    ril.subscription.types=NV,RUIM \
-    DEVICE_PROVISIONED=1
+    ril.subscription.types=RUIM \
+    ro.telephony.default_cdma_sub=0 \
+    ro.telephony.default_network=22,22 \
+    telephony.lteOnCdmaDevice=1 \
+
+# CNE
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.vendor.cne.feature=1
+
+# DPM
+#PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.vendor.dpm.feature=1 \
+    persist.vendor.dpm.loglevel=0 \
+    persist.vendor.dpm.nsrm.bkg.evt=3955 \
+
+# RCS
+#PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.rcs.supported=1

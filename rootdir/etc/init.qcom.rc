@@ -176,10 +176,10 @@ on boot
     chown wifi wifi /sys/module/wlan/parameters/fwpath
 
     # Enable qcrild and data services
-    enable vendor.qcrild
-    enable vendor.qcrild2
-    enable vendor.dataqti
-    enable vendor.dataadpl
+    #enable vendor.qcrild
+    #enable vendor.qcrild2
+    #enable vendor.dataqti
+    #enable vendor.dataadpl
 
 on property:sys.boot_completed=1
     # Used by sound trigger HAL
@@ -252,6 +252,14 @@ service vendor.panel-info /vendor/bin/init.panel_info.sh
     class core
     user root
     oneshot
+
+service vendor.ril-daemon2 /vendor/bin/hw/rild -c 2
+    class main
+    socket rild2 stream 660 root radio
+    socket rild-debug2 stream 660 radio system
+    user radio
+    group radio cache inet misc audio sdcard_r sdcard_rw diag log
+    capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
 
 service charger /system/bin/charger
     class charger
